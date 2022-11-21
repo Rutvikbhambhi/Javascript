@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap > div {
+            float: left; 
+            width: 100px;
+            margin: 1rem 1rem 0 0;
+            padding-left: 3px;
+            border: 1px solid #abc;
+        }
+        div.a{
+            background-color: aqua;
+        }
+        div.b{
+            background-color: burlywood;
+        }
+        div.c{
+            background-color: cornsilk;
+        }
+    </style>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="buttons">
+        <button>toggle</button>
+        <button class="a b">toggle a b c</button>
+        <a href="#">resetpc</a>
+    </div>
+    <div class="wrap">
+        <div></div>
+        <div class="b"></div>
+        <div class="a b"></div>
+        <div class="a c"></div>
+    </div>
+
+    <script>
+        var cls = [ "", "a", "a b", "a b c" ];
+        var divs = $( "div.wrap" ).children();
+        var appendClass = function() {
+            divs.append(function() {
+                return "<div>" + ( this.className || "none" ) + "</div>";
+            });
+        };
+
+        appendClass();
+
+        $( "button" ).on( "click", function() {
+            var tc = this.className || undefined;
+            divs.toggleClass( tc );
+            appendClass();
+        });
+
+        $( "a" ).on( "click", function( event ) {
+            event.preventDefault();
+            divs.empty().each(function( i ) {
+                this.className = cls[ i ];
+            });
+            appendClass();
+        });
+    </script>
+</body>
+</html>

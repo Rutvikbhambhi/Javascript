@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cust-para {
+        background-color: brown;
+        color: white;
+    }
+</style>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptas cum eveniet architecto odit, maiores sequi accusamus est deleniti tempora corrupti animi quidem ratione maxime neque autem iure quis asperiores quas. Voluptate nemo voluptates necessitatibus nostrum doloremque vitae atque obcaecati modi et earum iusto ea deleniti, maxime temporibus tempore omnis!</p>
+    <button id="addclassbtn">Add Class</button>
+    <button id="removeclassbtn">Remove Class</button>
+    <button id="toggleclassbtn">Toggle Class</button>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+          $("#addclassbtn").click(function () {
+            $('#para').addClass("cust-para")
+        })
+          $('#removeclassbtn').click(function () {
+            $('#para').removeClass("cust-para")
+        })
+          $('#toggleclassbtn').click(function () {
+            $('#para').toggleClass("cust-para")
+        })
+    </script>
+</body>
+</html>
