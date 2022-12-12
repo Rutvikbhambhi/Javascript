@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class MathOp {
+            constructor() {
+                console.log("called");
+            }
+            addition(a, b) {
+                console.log("addition a",a);
+                console.log("addition b",b);
+                return a + b
+            }
+        }
+
+        class AddMathOp extends MathOp{
+            avgOfTwo(x,y){
+                console.log("addition x",x);
+                console.log("addition y",y);
+                let additionres = this.addition(x,y)
+                console.log("Addition is ",additionres);
+                return additionres/2
+            }
+        }
+        let AddMathOpObject = new AddMathOp;
+        let ans = AddMathOpObject.avgOfTwo(50,90)
+        console.log("average is : ",ans);
+
+    </script>
+</body>
+
+</html>
