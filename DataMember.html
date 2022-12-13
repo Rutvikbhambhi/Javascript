@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Books {
+            authorName = "ABC"
+            constructor() {
+                console.log("called");
+            }
+            Book1() {
+                return "Book 1 data written by "+this.authorName
+            }
+            Book2() {
+                return "Book 2 data written by "+this.authorName
+            }
+            Book3() {
+                return "Book 3 data written by "+this.authorName
+            }
+            Book4() {
+                return "Book 4 data written by "+this.authorName
+            }
+        }
+            class Publication extends Books{
+                Navneet(){
+                    return "data"
+                }
+            }
+            let PublicationObj = new Publication;
+            let ans = PublicationObj.Book1()
+            console.log(PublicationObj.Book2());
+            console.log("function of b1 : ",ans);
+        
+    </script>
+</body>
+</html>
