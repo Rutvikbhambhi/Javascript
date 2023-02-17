@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function ChangeColor1() {
+            document.getElementById("id1").style.backgroundColor = '#000';
+            document.getElementById("id1").style.color = '#FFF';
+        } function ChangeColor2() {
+            document.getElementById("id1").style.backgroundColor = 'violet';
+            document.getElementById("id1").style.color = '#000';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="id1" onmouseover="ChangeColor1()" onmouseout="ChangeColor2()">
+        <span>this is my text of this div.</span>
+</body>
+
+</html>
