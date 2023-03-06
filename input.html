@@ -1,32 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <script type='text/javascript'>
-        function addFields(){
-            // Generate a dynamic number of inputs
-            var number = document.getElementById("member").value;
-            // Get the element where the inputs will be added to
-            var container = document.getElementById("container");
-            // Remove every children it had before
-            while (container.hasChildNodes()) {
-                container.removeChild(container.lastChild);
-            }
-            for (i=0;i<number;i++){
-                // Append a node with a random text
-                container.appendChild(document.createTextNode("Member " + (i+1)));
-                // Create an <input> element, set its type and name attributes
-                var input = document.createElement("input");
-                input.type = "text";
-                input.name = "member" + i;
-                container.appendChild(input);
-                // Append a line break 
-                container.appendChild(document.createElement("br"));
-            }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            font-family: arial;
+            font-size: 24px;
+            margin: 25px;
+            width: 100%px;
+            height: 500px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
         }
-    </script>
+    </style>
 </head>
+
 <body>
-    <input type="text" id="member" name="member" value="">Number of members: (max. 10)<br />
-    <a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
-    <div id="container"/>
+    <html>
+
+    <head>
+        <script type='text/javascript'>
+            function addFields() {
+                // Generate a dynamic number of inputs
+                var number = document.getElementById("member").value;
+                // Get the element where the inputs will be added to
+                var container = document.getElementById("container");
+                // Remove every children it had before
+                while (container.hasChildNodes()) {
+                    container.removeChild(container.lastChild);
+                }
+                for (i = 0; i < number; i++) {
+                    // Append a node with a random text
+                    container.appendChild(document.createTextNode("Member " + (i + 1)));
+                    // Create an <input> element, set its type and name attributes
+                    var input = document.createElement("input");
+                    input.type = "text";
+                    input.name = "member" + i;
+                    container.appendChild(input);
+                    // Append a line break 
+                    container.appendChild(document.createElement("br"));
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="member" name="member" value="">Number of members: (max. 10)<br />
+        <a href="#" id="filldetails" onclick="addFields()">Fill Details</a>
+        <div id="container" />
+    </body>
+
+    </html>
 </body>
+
 </html>
