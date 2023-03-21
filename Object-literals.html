@@ -8,11 +8,13 @@
 </head>
 <body>
     <script>
-        let name = "student";
-        let cources = "BA";
+        let fname = "Rutvik";
+        let lname = "Parmar";
+        let course = "BA";
 
-        function student(name, course){
-            return {name, course};
+        function student(fname, lname, course){
+            let fullname = fname + " " + lname;
+            return {fullname, course};
         }
 
         // var obj = {
@@ -22,8 +24,9 @@
         //         return `${this.studentname} is student of ${this.course}`
         //     }
         // };
-
-        console.log(student(name, course));
+        let R = student(fname, lname, course);
+        console.log(R.fullname);
+        console.log(R.course);
         // console.log(obj['detail show']());
 
 
