@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+            constructor(name, age, salary){
+                this.empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+                console.log("Constructor : Employee" + name);
+            }
+
+            info(){
+                // console.log("Employee Name : " + this.empname);
+                document.write(`<h3>Employee Class</h3> 
+                                Name : ${this.empname} <br>
+                                Age : ${this.empage} <br>
+                                Salary : ${this.empsalary} <br>`)
+            }
+        }
+
+        class manager extends employee{
+            info(){
+                let ta = 1000;
+                let pa = 300;
+                let totalsalary = this.empsalary + ta + pa;
+                // console.log("Employee Name : " + this.empname);
+                document.write(`<h3>Employee Class</h3> 
+                                Name : ${this.empname} <br>
+                                Age : ${this.empage} <br>
+                                Salary : ${this.empsalary} <br>`)
+            }
+        }
+
+        class test extends manager{
+
+        }
+        
+        let a = new test(" Rutvik", 19, 20000);
+        // let b = new employee(" Rahul", 21, 20000);
+
+        a.info();
+        b.info();
+
+    </script>
+</body>
+</html>
