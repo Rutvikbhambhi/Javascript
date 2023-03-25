@@ -102,7 +102,20 @@ newDiv.id = 'textBox';
 var newDivText = document.createTextNode('Rahul is my best friend');
 
 // add text to div
-newDiv.appendChild(newDivText)
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('#content');
+
+var form = document.querySelector('form');
+
+newDiv.style.color = 'red';
+newDiv.style.backgroundColor = 'grey';
+newDiv.style.border = '4px solid darkGrey';
+newDiv.style.padding = '10px';
+newDiv.style.margin = '30px 90px 20px 0px';
+
+
+container.insertBefore(newDiv, form);
 
 console.log(newDiv);
 
