@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<body>
+    <script>
+        const expr = 'bony barot';
+        document.title("Rutvik")
+        switch (expr) {
+            case 'Oranges':
+                console.log('Oranges are $0.59 a pound.');                
+                break;
+            case 'Mangoes': 
+                console.log(" hello i am mango");
+                break;
+            case 'Papayas':
+                console.log('papayas are $2.79 a pound.');
+                // Expected output: "Mangoes and papayas are $2.79 a pound."
+                break;
+            default:
+                console.log(`Sorry, we are out of ${expr}.`);
+        }
+    </script>
+</body>
+</html>
