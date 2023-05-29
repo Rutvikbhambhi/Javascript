@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, .time, .left_side, .right_side, .right_top, .right_down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    height: 80vh;
+    background-color: black;
+}
+
+.digital_clock, .time, .right_side, .right_top, .right_down {
+    position: relative;
+}
+
+.digital_clock {
+    color: aliceblue;
+    background: #2d2f38;
+    width: 425px;
+    padding: 20px 45px;
+    border-radius: 10px;
+}
+
+.digital_clock::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, blue, orange, green);
+    background-size: 200% 200%;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    filter: blur(10px);
+    animation: glowing 5s ease infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#hours {
+    font-weight: 800;
+    padding: 0 10px;
+    font-size: 5em;
+    margin-bottom: 25px;
+    background: -webkit-linear-gradient(90deg, blue, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.right_side {
+    flex-direction: column;
+}
+
+#dots {
+    font-size: 4em;
+    transform: translateY(-3px);
+    color: grey;
+}
+
+#minutes {
+    font-size: 5em;
+    margin-left: 10px;
+    transform: translateY(10px);
+    background: -webkit-linear-gradient(90deg, rgba(216, 112, 218, 0.63), white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;  
+}
+
+.right_down {
+    margin-left: 10px;
+    transform: translateY(-25px);
+}
+
+#period, #seconds {
+    font-size: 1.8em;
+    margin-left: 10px;
+}
+
+#period {
+    color: orangered;
+}
+
+#seconds {
+    color: white;
+}
