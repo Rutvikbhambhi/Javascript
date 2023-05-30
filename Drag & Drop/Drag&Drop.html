@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="whiteBox">
+        <div class="bgBox" draggable="true"></div>
+    </div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+
+
+    <script>
+        const bgBox = document.querySelector('.bgBox');
+        const whiteBoxes = document.getElementsByClassName('whiteBox');
+
+        bgBox.addEventListener('dragstart' , (e)=> {
+            console.log('DragStart has been triggered');
+            e.target.className += ' hold';
+            setTimeout(() => {
+                e.target.className = 'hide';
+            }, 0)
+        });
+
+        bgBox.addEventListener('dragend', (e) => {
+            console.log('DragEnd has been triggered');
+            e.target.className = 'bgBox';
+        });
+
+        for (whiteBox of whiteBoxes) {
+            whiteBox.addEventListener('dragover', (e)=>{
+                e.preventDefault();
+                console.log('DragOver has been triggered');
+            });
+
+            whiteBox.addEventListener('dragenter', (e)=>{
+                console.log('DragEnter has been triggered');
+                e.target.className += ' dashed';
+            });
+
+            whiteBox.addEventListener('dragleave', (e)=>{
+                console.log('DragLeave has been triggered');
+                e.target.className = 'whiteBox'
+            });
+
+            whiteBox.addEventListener('drop', (e)=>{
+                console.log('Drop has been triggered');
+                e.target.append(bgBox);
+            });
+        }
+    </script>
+
+    <!-- <div class="container">
+        <div id="left">
+            <div class="list" draggable="true">list Item 1</div>
+            <div class="list" draggable="true">list Item 2</div>
+            <div class="list" draggable="true">list Item 3</div>
+            <div class="list" draggable="true">list Item 4</div>
+        </div>
+    </div>
+    <div id="right"></div>
+
+    <script>
+        let lists = document.getElementsByClassName("list");
+        let rightBox = document.getElementById("right");
+        let leftBox = document.getElementById("left");
+
+        for (list of lists) {
+            list.addEventListener("dragstart", function (e) {
+                let selected = e.target;
+
+                rightBox.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                })
+                rightBox.addEventListener("drop", function (e) {
+                    rightBox.appendChild(selected);
+                    selected = null;
+                })
+
+                leftBox.addEventListener("dragover", function (e) {
+                    e.preventDefault();
+                })
+                leftBox.addEventListener("drop", function (e) {
+                    leftBox.appendChild(selected);
+                    selected = null;
+                })
+            });
+        }
+    </script> -->
+</body>
+
+</html>
