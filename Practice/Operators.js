@@ -41,8 +41,17 @@ let age = 20;
 //     console.log("Your name start with R");
 // }
 
-if(firstName[0] === "R" && age>19) {
+// if(firstName[0] === "R" && age>19) {
+//     console.log("You are above 19");
+// } else {
+//     console.log("age 19");
+// }
+
+// or operator  
+if(firstName[0] === "R" || age>19) {
     console.log("You are above 19");
 } else {
     console.log("age 19");
 }
+
+
