@@ -26,6 +26,7 @@
 // console.log(drink);
 
 
+
 // ternary operator / Conditional Operators
 // let age = 3;
 // let drink = age >= 5 ? "coffee" : "milk";
