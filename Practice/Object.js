@@ -78,38 +78,12 @@ console.log(name);
 
 
 
+// Object inside array 
+// very useful in real world application 
+const users = [
+    {userId: 1, firstName: "Rutvik", gender: "male"},
+    {userId: 2, firstName: "Rahul", gender: "male"},
+    {userId: 3, firstName: "Aditya", gender: "male"},
+];
 
-
-
-let a, b, rest;
-[a, b] = [10, 20];
-
-console.log(a);
-// Expected output: 10
-
-console.log(b);
-// Expected output: 20
-
-[a, b, ...rest] = [10, 20, 30, 40, 50];
-
-console.log(rest);
-// Expected output: Array [30, 40, 50]
-
-
-
-
-const user = {
-    id: 42,
-    displayName: "jdoe",
-    fullName: {
-      firstName: "Jane",
-      lastName: "Doe",
-    },
-};
-
-
-function userId({ id }) {
-    return id;
-}
-  
-console.log(userId(user)); // 42
+// const
