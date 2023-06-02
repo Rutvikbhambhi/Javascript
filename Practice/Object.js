@@ -80,10 +80,26 @@ console.log(name);
 
 // Object inside array 
 // very useful in real world application 
+// const users = [
+//     {userId: 1, firstName: "Rutvik", gender: "male"},
+//     {userId: 2, firstName: "Rahul", gender: "male"},
+//     {userId: 3, firstName: "Aditya", gender: "male"},
+// ];
+
+// for(let user of users){
+//     console.log(user.firstName);
+// }
+
+
+
+// nested destructuring
 const users = [
-    {userId: 1, firstName: "Rutvik", gender: "male"},
-    {userId: 2, firstName: "Rahul", gender: "male"},
-    {userId: 3, firstName: "Aditya", gender: "male"},
+    {userId: 1,firstName: 'Rutvik', gender: 'male'},
+    {userId: 2,firstName: 'Rahul', gender: 'male'},
+    {userId: 3,firstName: 'Aditya', gender: 'male'},
+    {userId: 4,firstName: 'Vivek', gender: 'male'},
 ];
 
-// const
+const [{firstName: user1firstName, userId}, , {gender}] = users;
+console.log(user1firstName);
+console.log(gender);
