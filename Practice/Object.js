@@ -25,7 +25,7 @@
 const key = "email";
 const person = {
     name: "Rutvik",
-    age: 22,
+    age: 20,
     "person hobbies": ["guitar", "sleeping", "listening music"]
 }
 
@@ -65,3 +65,51 @@ obj[key1] = value1;
 obj[key2] = value2;
 
 console.log(obj);
+
+
+// Object destructuring
+const name = {
+    Name: "Rutvik",
+    age: 20, 
+};
+
+const { Name, age } = name;
+console.log(name);
+
+
+
+
+
+
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+
+
+
+
+const user = {
+    id: 42,
+    displayName: "jdoe",
+    fullName: {
+      firstName: "Jane",
+      lastName: "Doe",
+    },
+};
+
+
+function userId({ id }) {
+    return id;
+}
+  
+console.log(userId(user)); // 42
