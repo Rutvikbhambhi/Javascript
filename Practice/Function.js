@@ -40,3 +40,10 @@ function findTarget(array, target) {
 const myArray = [1,3,8,90];
 const ans = findTarget(myArray, 8);
 console.log(ans);
+
+
+const num = [1,2,3,4]
+    num.slice(2)
+    num.slice(1,3)
+
+console.log(num);
