@@ -73,7 +73,7 @@ app();
 function myApp(){
     const myVar = "value1";
     function myFunc(){
-        // const my
+         // const my
     }
     const myFunc2 = function() {}
     const myFunc3 = () => {}
