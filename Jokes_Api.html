@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        #joke {
+            background-color: #ddd8d8;
+            color: #383434;
+            font-size: 1.5em;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="joke">This is joke</div>
+    
+    <script>
+        let jokes = [
+            {
+                "category": "Misc",
+                "type": "twopart",
+                "setup": "What does a woman's pussy and a chainsaw have in common?",
+                "delivery": "Miss by a few inches and you're in deep shit.",
+                "flags": {
+                    "nsfw": true,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": true
+                },
+                "id": 157,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Pun",
+                "type": "single",
+                "joke": "How do you make holy water? You boil the hell out of it.",
+                "flags": {
+                    "nsfw": false,
+                    "religious": true,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": false
+                },
+                "id": 202,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Misc",
+                "type": "twopart",
+                "setup": "What is the difference between an oral thermometer and a rectal thermometer?",
+                "delivery": "The taste.",
+                "flags": {
+                    "nsfw": true,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": true
+                },
+                "id": 175,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Your mama's so FAT she can't save files bigger than 4GB.",
+                "flags": {
+                    "nsfw": false,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": true
+                },
+                "id": 9,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Misc",
+                "type": "single",
+                "joke": "Two reasons I don't give money to homeless people.\n1) They are going to spend it all on drugs and alcohol\n2) I am going to spend it all on drugs and alcohol.",
+                "flags": {
+                    "nsfw": false,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": false
+                },
+                "id": 72,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "UDP is better in the COVID era since it avoids unnecessary handshakes.",
+                "flags": {
+                    "nsfw": false,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": false
+                },
+                "id": 259,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Misc",
+                "type": "twopart",
+                "setup": "How do construction workers party?",
+                "delivery": "They raise the roof.",
+                "flags": {
+                    "nsfw": false,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": false
+                },
+                "id": 217,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Dark",
+                "type": "twopart",
+                "setup": "9/11 jokes are not funny.",
+                "delivery": "The other 2 though, are hilarious!",
+                "flags": {
+                    "nsfw": false,
+                    "religious": false,
+                    "political": true,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": false
+                },
+                "id": 77,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Pun",
+                "type": "twopart",
+                "setup": "What do you call 4 Mexicans in quicksand?",
+                "delivery": "Quatro Sinko.",
+                "flags": {
+                    "nsfw": false,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": false
+                },
+                "id": 177,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Dark",
+                "type": "twopart",
+                "setup": "What do 9 out of 10 people enjoy?",
+                "delivery": "Gang rape.",
+                "flags": {
+                    "nsfw": true,
+                    "religious": false,
+                    "political": false,
+                    "racist": false,
+                    "sexist": false,
+                    "explicit": true
+                },
+                "id": 230,
+                "safe": false,
+                "lang": "en"
+            }
+        ]
+
+        let index = Math.floor(Math.random()* (jokes.length - 1))
+        console.log(index);
+        joke.innerHTML = jokes[index].joke
+
+    </script>
+</body>
+
+</html>
