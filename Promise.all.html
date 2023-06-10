@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let promiseCall = function(returnData, message)  {
-            return function(resolve, reject){
+        let promiseCall = function (returnData, message) {
+            return function (resolve, reject) {
                 setTimeout(() => {
                     console.log(`The ${message} promise`);
                     resolve(returnData);
@@ -31,20 +33,20 @@
         //     }, 4 * 5000);
         // }); 
 
-        let p1 = new Promise(promiseCall(10,"first"));
-        let p2 = new Promise(promiseCall(20,"second"));
-        let p3 = new Promise(promiseCall(30,"third"));
-        let p4 = new Promise(function(resolve, reject){
+        let p1 = new Promise(promiseCall(10, "first"));
+        let p2 = new Promise(promiseCall(20, "second"));
+        let p3 = new Promise(promiseCall(30, "third"));
+        let p4 = new Promise(function (resolve, reject) {
             reject("rejected")
         });
 
         var total = 0;
-        Promise.all([p1,p2,p3,p4]).then((result) =>{
+        Promise.all([p1, p2, p3, p4]).then((result) => {
 
-            for (var i in result){
+            for (var i in result) {
                 total += result[i];
             }
-            
+
             console.log(`Results: ${result}`);
             console.log(`Total: ${total}`);
         }).catch((error) => {
@@ -53,4 +55,5 @@
 
     </script>
 </body>
+
 </html>
