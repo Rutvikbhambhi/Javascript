@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,12 @@
     <title>Document</title>
 
     <style>
-
         .main {
             background-color: blueviolet;
             height: 200px;
             width: 200px;
         }
+
         .box {
             position: absolute;
             top: 50px;
@@ -24,6 +25,7 @@
     </style>
 
 </head>
+
 <body>
 
     <div class="main">
@@ -38,9 +40,22 @@
     <!-- <script src="./Array.js"></script> -->
     <!-- <script src="./Object.js"></script> -->
     <!-- <script src="./Spread-Operator.js"></script> -->
-    <script src="./Function.js"></script>
+    <!-- <script src="./Function.js"></script> -->
     <!-- <script src="./Arrow-Function.js"></script> -->
     <!-- <script src="./Hoisting.js"></script> -->
     <!-- <script src="./01.js"></script> -->
+
+
+    <script>
+        console.log(1);
+        setTimeout(function foo() {
+            console.log("foo");
+        }, 0);
+        Promise.resolve().then(function boo() {
+            console.log("boo");
+        });
+        console.log(2);
+    </script>
 </body>
+
 </html>
