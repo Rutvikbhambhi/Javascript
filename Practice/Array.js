@@ -110,14 +110,14 @@ console.log(array2);
 const fruits = ["apple", "mango", "grapes", "papita"]
 const fruits2 = [];
 
-// for(let index in fruits) {
-//     fruits2.push(fruits[index].toLowerCase())
-// }
-// console.log(fruits2);
-
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+for(let index in fruits) {
+    fruits2.push(fruits[index].toUpperCase())
 }
+console.log(fruits2);
+
+// for (let i = 0; i < fruits.length; i++) {
+//     console.log(fruits[i]);
+// }
 
 
 // array destructuring
