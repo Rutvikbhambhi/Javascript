@@ -19,27 +19,27 @@ const users = function(){
 }
 users();
 
-// function isEven(number){
-//     if(number % 2 === 0){
-//         return true
-//     }
-//         return false
-// }
+function isEven(number){
+    if(number % 2 === 0){
+        return true;
+    }
+        return false;
+}
 
-// console.log(isEven(2));
+console.log(isEven(2));
 
 
-// const findTarget = function(array, target) {
-//     for (let i = 0; i < array.length; i++) {
-//         if (array[i]===target) {
-//             return i;
-//         }
-//     }
-//     return -1;
-// }
-// const myArray = [1,3,8,90];
-// const ans = findTarget(myArray, 8);
-// console.log(ans);
+const findTarget = function(array, target) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i]===target) {
+            return i;
+        }
+    }
+    return -1;
+}
+const myArray = [1,3,8,90];
+const ans = findTarget(myArray, 8);
+console.log(ans);
 
 
 // const num = [1,2,3,4]
