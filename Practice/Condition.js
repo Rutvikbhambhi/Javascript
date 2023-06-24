@@ -21,7 +21,7 @@
 //     if(userGuess < winningNumber){
 //         console.log("too low !");
 //     } else {
-//         console.log("too high !");
+//         console.log("too high !");  
 //     }
 // }
 

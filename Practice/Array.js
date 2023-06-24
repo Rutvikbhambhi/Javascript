@@ -13,22 +13,22 @@
 // pop 
 // let fruits = [1,2,3,4,5];
 // fruits.pop()
-// console.log(fruits);
+// console.log(fruits); // 1,2,3,4
 
 // push 
 // let fruits = [1,2,3,4,5];
 // fruits.push(6)
-// console.log(fruits);
+// console.log(fruits); // 1,2,3,4,5,6
 
 // shift 
 // let fruits = [1,2,3,4,5];
 // fruits.shift()
-// console.log(fruits);
+// console.log(fruits); // 2,3,4,5
 
 // unshift 
 // let fruits = [1,2,3,4,5];
 // fruits.unshift(0)
-// console.log(fruits);
+// console.log(fruits); // 0,1,2,3,4,5
 
 
 
@@ -70,7 +70,7 @@ let array2 = [].concat(array1, ["item3", "item4"]);
 // let array2 = [...array1];
 array1.push("item3");
 
-console.log(array1===array2);
+console.log(array1 === array2);
 console.log(array1);
 console.log(array2);
 
@@ -107,7 +107,7 @@ console.log(array2);
 
 
 // For in loop in array 
-const fruits = ["apple", "mango", "grapes", "papita"] 
+const fruits = ["apple", "mango", "grapes", "papita"]
 const fruits2 = [];
 
 // for(let index in fruits) {
@@ -115,7 +115,7 @@ const fruits2 = [];
 // }
 // console.log(fruits2);
 
-for(let i = 0; i<fruits.length; i++){
+for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 

@@ -18,8 +18,8 @@
 
 // String indexing
 // let Rutvik = "Rutvik";
-// console.log(Rutvik.length);
-// console.log(Rutvik[Rutvik.length-1]);
+// console.log(Rutvik.length); 6
+// console.log(Rutvik[Rutvik.length-4]); // t
 
 
 // String Method
@@ -63,20 +63,20 @@
 
 // convert to string to number.
 // let myStr = +"20";
-// console.log(typeof myStr);
+// console.log(typeof myStr); //String
 
 // let age = 18;
 // age = String(age);
-// console.log(typeof age);
+// console.log(typeof age); //number
 
 
 
 // String Concatenation
-// let string1 = "20"
-// let string2 = "19"
+let string1 = "20"
+let string2 = "19"
 
-// let newString = +string1 + +string2;
-// console.log(newString);
+let newString = +string1 + +string2;
+console.log(newString); // 39
 
 
 
@@ -85,30 +85,30 @@
 // let firstName = "Rutvik"
 
 // let aboutMe = `my name is ${firstName} and my age is ${age}`
-// console.log(aboutMe);
+// console.log(aboutMe); //my name is Rutvik and my age is 20
 
 
 // undefined 
 let firstName;
-console.log(typeof firstName);
+console.log(typeof firstName); // undefined
 firstName = "Rutvik";
-console.log(typeof firstName, firstName);
+console.log(typeof firstName, firstName); //string Rutvik
 
 // null 
 let myVariable = null;
-console.log(myVariable);
+console.log(myVariable); // null
 myVariable = "Rutvik";
-console.log(myVariable, typeof myVariable);
-console.log(typeof null); // -----> bug , error
+console.log(myVariable, typeof myVariable); // Rutvik string
+console.log(typeof null); // object  // -----> bug , error
 
 // BigInt
 let myNumber = BigInt(15);
 let sameMyNumber = 123;
-console.log(myNumber);
+console.log(myNumber); //15n
 // console.log(Number.MAX_SAFE_INTEGER);
 
 
 // Boolean 
 let num1 = 7;
 let num2 = 6;
-console.log(num1>num2);
+console.log(num1>num2); //true

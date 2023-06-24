@@ -1,11 +1,11 @@
 
 // while loop
-// let i = 0;
+let i = 0;
 
-// while(i<=3){
-//     console.log(i);
-//     i++;
-// }
+while(i<=3){
+    console.log(i);
+    i++;
+}
 
 
 // Example 
@@ -63,10 +63,10 @@
 
 
 // do while loop
-let i = 10;
-do {
-    console.log(i);
-    i++;
-}while(i<=9);
+// let i = 10;
+// do {
+//     console.log(i);
+//     i++;
+// }while(i<=9);
 
-console.log("value of i is", i);
+// console.log("value of i is", i);

@@ -1,5 +1,5 @@
-
-let day = 2;
+    
+let day = 6;
 
 switch (day) {
     case 0:
