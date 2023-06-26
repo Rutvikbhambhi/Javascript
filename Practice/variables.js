@@ -88,11 +88,24 @@ console.log(newString); // 39
 // console.log(aboutMe); //my name is Rutvik and my age is 20
 
 
+// Array Destructuring
+const myproglang = ['html', 'css', 'js', 'react-js'];
+
+// ES-6
+// let [top1, top2, top3, top4, top5] = myproglang;
+// console.log("my fav prog lang is " + top1);
+
+// console.log(myproglang.length);
+
+// let [top1, , , toplast] = myproglang;
+// console.log(`my fav pro lang is ${top1} and my last fav is ${toplast} `);
+
+
 // undefined 
-let firstName;
-console.log(typeof firstName); // undefined
-firstName = "Rutvik";
-console.log(typeof firstName, firstName); //string Rutvik
+// let firstName;
+// console.log(typeof firstName); // undefined
+// firstName = "Rutvik";
+// console.log(typeof firstName, firstName); //string Rutvik
 
 // null 
 let myVariable = null;
@@ -111,4 +124,4 @@ console.log(myNumber); //15n
 // Boolean 
 let num1 = 7;
 let num2 = 6;
-console.log(num1>num2); //true
+console.log(num1 > num2); //true
