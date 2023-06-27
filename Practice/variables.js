@@ -101,6 +101,22 @@ const myproglang = ['html', 'css', 'js', 'react-js'];
 // console.log(`my fav pro lang is ${top1} and my last fav is ${toplast} `);
 
 
+// Object Destructuring
+const bioData = {
+    name: "Rutvik",
+    age: 20,
+    deg: "B.A",
+    hobby: {
+        first: "playing",
+        sec: "youtube videos"
+    }
+}
+
+let { name: myname, age: age, deg, hobby } = bioData;
+
+console.log(`my name is ${myname}. my age is ${age}. my degree is ${deg}. I love makking ${hobby.sec }`);
+
+
 // undefined 
 // let firstName;
 // console.log(typeof firstName); // undefined
