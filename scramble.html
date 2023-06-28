@@ -92,10 +92,12 @@
             text-transform: uppercase;
             transition-property: all;
             transition-duration: 0.5s;
-            transition-timing-function: cubic-bezier(0.65,-0.25,0.25,1.95);
+            transition-timing-function: cubic-bezier(0.65, -0.25, 0.25, 1.95);
         }
 
-        button.btn:hover, button.btn:focus, button.btn:active {
+        button.btn:hover,
+        button.btn:focus,
+        button.btn:active {
             letter-spacing: 0.125rem;
             word-spacing: 0.2rem;
         }
@@ -103,7 +105,6 @@
         .hidden {
             display: none;
         }
-
     </style>
 
 </head>
@@ -133,17 +134,50 @@
 
         const createNewWords = () => {
             let ranNum = Math.floor(Math.random() * sWords.length);
-            // console.log(sWords);
             let newTempSwords = sWords[ranNum];
+            // console.log(newTempSwords.split(""));
             return newTempSwords;
         }
 
-        btn.addEventListener('click', function() {
-            if(!play) {
+        const scrambleWords = (arr) => {
+            for (let i = arr.length-1; i>=0; i--) {
+                let temp = arr[i];
+                // console.log(temp);
+                let j = Math.floor(Math.random()*(i+1));
+                // console.log(i);
+                // console.log(j);
+
+                arr[i] = arr[j]
+                arr[j] = temp
+
+            }
+
+            return arr;
+        }
+
+        btn.addEventListener('click', function () {
+            if (!play) {
                 play = true;
                 btn.innerHTML = "Guess";
                 guess.classList.toggle('hidden');
-                createNewWords();
+                newWords = createNewWords();
+                randWords = scrambleWords(newWords.split("")).join("");
+                // console.log(randWords);
+                msg.innerHTML = `Guess The Word : ${randWords}`;
+            } else {
+                let tempWord = guess.value;
+                if (tempWord === newWords) {
+                    // console.log('correct');
+                    play = false;
+                    msg.innerHTML = `It's Correct. it is ${newWords}`;
+                    btn.innerHTML = "Start Again"
+                    guess.classList.toggle('hidden')
+                    guess.value = "";
+
+                } else {
+                    console.log('incorrect');
+                    msg.innerHTML = `Sorry It's not Correct. please try again ${randWords}`
+                }
             }
         })
 
