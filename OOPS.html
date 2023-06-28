@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        // class hello{
-        //     message(){
-        //         console.log("Hello Everyone");
-        //     }
-        //     sorry(){
-        //         console.log("sorry Everyone");
-        //     }
-        // }
+        class hello{
+            message(){
+                console.log("Hello Everyone");
+            }
+            sorry(){
+                console.log("sorry Everyone");
+            }
+        }
 
         // let a = new hello();
         // // let b = new hello();
@@ -24,30 +26,30 @@
         // a.sorry();
         // // b.sorry();
 
-        class student{
-            constructor(name, age){
+        class student {
+            constructor(name, age) {
                 this.studentname = name;
                 this.studentage = age;
-                console.log("constructor Function");         
+                console.log("constructor Function");
             }
 
-            hello(){
+            hello() {
                 document.write(`Hello ${this.studentname}
                 Your age is  ${this.studentage}`);
             }
 
-            static staticMethod(){
+            static staticMethod() {
                 console.log("static Function")
             }
         }
 
-        let a = new student("Rutvik ",19);
-        let b = new student(" Rahul",21);
+        let a = new student("Rutvik ", 19);
+        let b = new student(" Rahul", 21);
 
         // a.name = "Rutvik";
         a.hello();
         student.staticMethod();
-
     </script>
 </body>
+
 </html>

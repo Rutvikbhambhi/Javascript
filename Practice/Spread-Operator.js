@@ -19,4 +19,4 @@ const obj2 = {
 };
 
 const newObject = {...["obj1", "obj2"]};
-console.log(newObject);           
+console.log(newObject);            
