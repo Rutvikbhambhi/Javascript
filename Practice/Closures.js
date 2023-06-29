@@ -19,17 +19,35 @@
 // ans();
 
 
-function myFunction(power){
-    return function(number){
-        return number ** power
+// function myFunction(power){
+//     return function(number){
+//         return number ** power
+//     }
+// }
+
+// const square = myFunction(2)
+// const ans = square(3)
+// console.log(ans); 
+
+
+// const cube = myFunction(3);
+// const ans2 = cube(3);
+// console.log(ans2);
+
+
+function func() {
+    let counter = 0;
+    return function(){
+        if (counter < 1) {
+            console.log("Hii You Called Me");
+            counter++;
+        } else {
+            console.log("I am already called");
+        }
     }
 }
 
-const square = myFunction(2)
-const ans = square(3)
-console.log(ans); 
-
-
-const cube = myFunction(3);
-const ans2 = cube(3);
-console.log(ans2);
+const myFunc = func();
+myFunc();
+myFunc();
+// const myFunc();
