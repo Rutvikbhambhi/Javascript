@@ -34,3 +34,23 @@ for (let i = 0; i <= ages.length; i++) {
         console.log(ages[i]);
     }
 }
+for (let i = 0; i <= ages.length; i++) {
+    if(ages[i]>=20){
+        console.log(ages[i]);
+    }
+}
+for (let i = 0; i <= ages.length; i++) {
+    if(ages[i]>=20){
+        console.log(ages[i]);
+    }
+}
+for (let i = 0; i <= ages.length; i++) {
+    if(ages[i]>=20){
+        console.log(ages[i]);
+    }
+}
+for (let i = 0; i <= ages.length; i++) {
+    if(ages[i]>=20){
+        console.log(ages[i]);
+    }
+}
