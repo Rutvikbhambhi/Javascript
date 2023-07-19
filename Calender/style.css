@@ -83,6 +83,14 @@ header .icons span:last-child {
     cursor: pointer;
 }
 
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #ffffffe6;
+}
+
 .calender ul li::before {
     content: '';
     position: absolute;
@@ -93,21 +101,13 @@ header .icons span:last-child {
     border-radius: 50%;
     z-index: -1;
     transform: translate(-50%, -50%);
-    background: #f2f2f2;
+    /* background: #f2f2f2; */
 }
 
 .days li:hover::before {
     background: #f2f2f2;
 }
 
-.days li:hover::before {
-    background: #f2f2f2;
-}
-
-.days li:hover::before {
-    background: #f2f2f2;
-}
-
-.days li:hover::before {
-    background: #f2f2f2;
+.days li.active::before {
+    background: #9d51bb;
 }
