@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let arr = [0,1];
+        let index = 0;
+        while (index <= 10) {
+            document.write(`<li>${arr.push((arr[arr.length - 1]) + (arr[arr.length - 2]))}</li>`)
+            // arr.push((arr[arr.length - 1]) + (arr[arr.length - 2]))
+            index++;
+        }
+        console.log(arr);
+    </script>
+  </body>
+</html>
