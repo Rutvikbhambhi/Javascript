@@ -32,6 +32,8 @@ const renderCalender = () => {
   for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
     // const element = array[i];
     liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+    liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
   }
 
   for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
