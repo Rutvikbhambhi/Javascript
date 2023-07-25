@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Traversing</title>
+  </head>
+  <body>
+    <input type="text" id="element" placeholder="" />
+    <button onclick="getElement()">Get Element</button>
+
+    <script>
+      // Array Traversing and Accessing in Data Structure
+      let data = [9, 22, 56, 87, 55, 10, 0, 7, 2, 45];
+      //   for(let i=0;i<data.length;i++) {
+      //     document.write(`Array ${i} is ${data[i]} <br>`)
+      //   }
+      //   let x = 3;
+      //   document.write(data[x]);
+      function getElement() {
+        let el = document.getElementById("element").value;
+        if (el < data.length && typeof parseInt(el)=== "number") {
+          alert(data[el]);
+        } else {
+          alert("Please enter valid input");
+        }
+      }
+    </script>
+  </body>
+</html>
