@@ -7,18 +7,56 @@
     </head>
     <body>
         <script>
-        let rows = prompt();
-        for (var i = 1; i<=rows; i++) {
+        // let rows = prompt();
+        // for (var i = 1; i<=rows; i++) {
 
-            for(var j=1; j<=i; j++ ){
+        //     for(var j=1; j<=i; j++ ){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+        
+        // for (var i = rows; i>=1; i--) {
+
+        //     for(var j=1; j<=i; j++ ){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>");
+        // }
+
+
+        // let num = prompt()
+        // for(var i = num; i>=0; i--){
+        //     document.write(i)
+        //     document.write("<br>")
+        // }
+
+
+
+        // var i,j,k;
+        // for(i = 1; i <= 5; i++){
+        //     for(j = 1; j <= 5-i; j++){
+        //         document.write("&nbsp;&nbsp;")
+        //     }
+        //     for(k = 1; k <= i; k++){
+        //         document.write("*")
+        //     }
+        //     document.write("<br>")
+        // }
+
+
+        var i,j,k,l;
+        for(i=1; i<=5; i++){
+
+            for(j=1; j<=5-i; j++){
+                document.write("&nbsp;&nbsp;")
+            }
+            
+            for(k=1; k<=i; k++){
                 document.write("*")
             }
-            document.write("<br>")
-        }
-        
-        for (var i = rows; i>=1; i--) {
 
-            for(var j=1; j<=i; j++ ){
+            for(l=2; l<=i; l++){
                 document.write("*")
             }
             document.write("<br>")

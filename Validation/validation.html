@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post" id="myform">
+        <input type="text" placeholder="Enter User Name" autocomplete="off" name="username"> <br>
+        <br>
+        <input type="password" placeholder="Enter Password" autocomplete="off" required name="password">
+        <br> <br>
+        <input type="email" placeholder="Enter Email" autocomplete="off" required name="email"> <br> <br>
+        <input type="tel" placeholder="Enter Mobile Number" autocomplete="off" name="mobile"> <br> <br>
+        <button type="submit" name="btn">Save</button>
+    </form>
+
+    <script>
+        const allinput = document.querySelectorAll("[required]")
+        allinput.forEach((inputs) => {
+            // console.log(data);  
+            inputs.addEventListener("blur", function () {
+                let p = document.createElement("span");
+                const newtest = document.createTextNode("This field is required");
+                p.appendChild(newtest);
+                console.log("called",this.value);
+                if (this.value == "") {
+                    console.log(this.nextSibling.nodeName);
+                    if (this.nextSibling.nodeName == "SPAN") {
+                        // console.log(this.nextSibling.remove());                    
+                        this.nextSibling.remove()
+                    } else {
+                        this.after(p)
+                    }
+                    // this.after(p)
+                } else {
+                    // this.nextsibling;
+                    // console.log(this.nextSibling);
+                    console.log(this.nextSibling.remove());
+                }
+            });
+        });
+    </script>
+
+</body>
