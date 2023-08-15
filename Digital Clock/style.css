@@ -88,6 +88,8 @@ body {
 .right_down {
     margin-left: 10px;
     transform: translateY(-25px);
+    position: static;
+    top: 70px;
 }
 
 #period, #seconds {
