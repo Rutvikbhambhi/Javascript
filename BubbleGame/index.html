@@ -50,7 +50,7 @@
             function makeBubble() {
                 var Clutter = "";
 
-                for (let i = 0; i <= 118; i++) {
+                for (let i = 0; i <= 111; i++) {
                     var rn = Math.floor(Math.random()*10)
                     Clutter += `<div class="bubble">${rn}</div>`;
                 }
@@ -78,10 +78,12 @@
                     increaseScore();
                     makeBubble();
                     getNewHit();
+                   document.getElementById("wrong").innerHTML = "Good";
+                   document.getElementById("wrong").style.color="blue";
                 }
-
                 else{
                     document.getElementById("wrong").innerHTML = "Try Again";   
+                    document.getElementById("wrong").style.color="red";
                 }
                 
             })
