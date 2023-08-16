@@ -10,6 +10,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background-color: rgb(177, 230, 177);
 }
 
 #main {
@@ -17,8 +18,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
-    background-color: rgb(177, 230, 177);
+    /* height: 100%; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -85,4 +85,11 @@ body {
 .bubble:hover {
     cursor: pointer;
     background-color: rgb(50, 75, 50);
+}
+#wrong{
+  display: block;
+  font-size: 25px;
+  color: red;
+  text-align: center;
+  margin: 20px 0;
 }

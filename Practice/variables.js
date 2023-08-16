@@ -18,7 +18,7 @@
 
 // String indexing
 // let Rutvik = "Rutvik";
-// console.log(Rutvik.length); 6
+// console.log(Rutvik.length); // 6
 // console.log(Rutvik[Rutvik.length-4]); // t
 
 
@@ -28,18 +28,20 @@
 // toUpperCase()
 // toLowerCase()
 // slice()
-// let first_Name = "Rutvik";
+// let first_Name = "   Rutvik";
 // console.log(first_Name.length);
 // first_Name = first_Name.trim();
 // console.log(first_Name);
 // console.log(first_Name.length);
 
+// let first_Name = "Rutvik";
 // first_Name = first_Name.toUpperCase();
 // first_Name = first_Name.toLowerCase();
 // console.log(first_Name);
 
-// let newString = first_Name.slice(0,4)
-// console.log(newString);
+// let first_Name = "Rutvik";
+// let Name = first_Name.slice(0,4)
+// console.log(Name);
 
 
 
@@ -53,22 +55,22 @@
 // BigInt  
 // Symbol
 
-// let age = 20;
+// let ages = 20;
 // let firstName = "Rutvik"
-// console.log(typeof age);
+// console.log(typeof ages);
 
 // convert to number to string.
-// age = age + "";
-// console.log(typeof(age)); "20"
+// let ages = 20;
+// ages = ages + "";
+// console.log(typeof(ages)); // "20"
 
 // convert to string to number.
 // let myStr = +"20";
-// console.log(typeof myStr); //String
+// console.log(typeof myStr); //Number
 
 // let age = 18;
 // age = String(age);
-// console.log(typeof age); //number
-
+// console.log(typeof age); //String
 
 
 // String Concatenation
@@ -79,13 +81,12 @@ let newString = +string1 + +string2;
 console.log(newString); // 39
 
 
-
 // template string
-// let age = 20;
-// let firstName = "Rutvik"
+let ages = 20;
+let firstName = "Rutvik"
 
-// let aboutMe = `my name is ${firstName} and my age is ${age}`
-// console.log(aboutMe); //my name is Rutvik and my age is 20
+let aboutMe = `my name is ${firstName} and my age is ${ages}`
+console.log(aboutMe); //my name is Rutvik and my age is 20
 
 
 // Array Destructuring

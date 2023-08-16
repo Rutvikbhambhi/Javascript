@@ -29,6 +29,7 @@
                 </div>
             </div>
         </div>
+        <p id="wrong"></p>
 
         <script>
             var timer = 60;
@@ -78,6 +79,11 @@
                     makeBubble();
                     getNewHit();
                 }
+
+                else{
+                    document.getElementById("wrong").innerHTML = "Try Again";   
+                }
+                
             })
             runTimer();
             makeBubble();
