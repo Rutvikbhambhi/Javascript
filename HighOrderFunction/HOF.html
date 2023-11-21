@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const HOF = (name) => {
+        if (name === "Rutvik") {
+          return function (topic) {
+            console.log(`Hii ${name}. What is ${topic}?. Plz explain us.`);
+          };
+        }
+        if (name === "Rahul") {
+          return function (topic) {
+            console.log(`Hii ${name}. What is ${topic}?. Plz explain us.`);
+          };
+        }
+        if (name === "Meet") {
+          return function (topic) {
+            console.log(`Hii ${name}. What is ${topic}?. Plz explain us.`);
+          };
+        } else {
+          return function () {
+            console.log("Wellcome to HOF");
+          };
+        }
+        console.log("Rutvik");
+      };
+      HOF("Rutvik")("UI");
+      HOF("Rahul")("Full Stack Developer");
+      HOF("Meet")("Front End Developer");    
+    </script>
+  </body>
+</html>
